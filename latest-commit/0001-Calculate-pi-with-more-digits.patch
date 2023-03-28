@@ -1,0 +1,44 @@
+From 7e23e90030bbaba4060e60a4505ffec637149ea6 Mon Sep 17 00:00:00 2001
+From: John Doe <john.doe@example.com>
+Date: Thu, 10 Apr 2014 09:19:29 +0200
+Subject: [PATCH 1/2] Calculate pi with more digits
+
+Dik T. Winter style
+
+Build: gcc -Wall another_pi.c -o pi
+Run: ./pi
+---
+ another_pi.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+ create mode 100644 another_pi.c
+
+diff --git a/another_pi.c b/another_pi.c
+new file mode 100644
+index 0000000..86df41b
+--- /dev/null
++++ b/another_pi.c
+@@ -0,0 +1,21 @@
++/* Pi with 800 digits
++ * Dik T. Winter style, but modified sligthly
++ * https://crypto.stanford.edu/pbc/notes/pi/code.html
++ */
++ #include <stdio.h>
++
++void another_pi (void) {
++    printf("800 digits of pi:\n");
++    int a=10000, b=0, c=2800, d=0, e=0, f[2801], g=0;
++    for ( ;b-c; )f[b++]=a/5;
++        for (;d=0,g=c*2;c-=14,printf("%.4d",e+d/a),e=d%a)
++            for (b=c; d+=f[b]*a, f[b]=d%--g,d/=g--,--b; d*=b);
++
++    printf("\n");
++}
++
++int main (void){
++    another_pi();
++
++    return 0;
++}
+-- 
+2.37.2.windows.2
+
